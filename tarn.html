@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Tung Quiz!!!</title>
+   <style>
+        /* Provided CSS styling */
+        html {
+            display: table;
+            margin: auto;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: left;
+        }
+        button {
+            display: block;
+            width: 150px;
+            margin: 0 auto;
+        }
+   </style>
+</head>
+<body>
+    <!-- Provided HTML structure -->
+    <h1>Tung Quiz!!!</h1>
+
+    <form>
+        <p>1. อายุของน้องตั๋ง</p>
+        <input type="radio" id="age1" name="age" value="2">
+           <label for="html">2</label><br>
+        <input type="radio" id="age2" name="age" value="19">
+           <label for="html">19</label><br>
+        <input type="radio" id="age3" name="age" value="10,000,000">
+           <label for="html">10,000,000</label><br>
+
+        <p>2. ชื่อ-นามสกุลน้องตั๋ง</p>
+        <input type="radio" id="name1" name="name" value="n1">
+           <label for="html">ตั๋ง จิ๋ว</label><br>
+        <input type="radio" id="name2" name="name" value="n2">
+           <label for="html">กฤตภพ มนูพรประภา</label><br>
+        <input type="radio" id="name3" name="name" value="n3">
+           <label for="html">ไอ้จิ๋วธาร สองขวบ</label><br>
+
+        <p>3. หมาของน้องตั๋ง</p>
+        <input type="radio" id="dog1" name="dog" value="d1">
+           <label for="html">บราวนี่</label><br>
+        <input type="radio" id="dog2" name="dog" value="d2">
+           <label for="html">สายธาร</label><br>
+        <input type="radio" id="dog3" name="dog" value="d3">
+           <label for="html">น้องธาร</label><br>
+        
+        <p>4. น้องตั๋งรักใครที่สุด</p>
+        <input type="radio" id="tarn1" name="tarn" value="t1">
+           <label for="html">น้องธารสุดน่ารัก</label><br>
+        <input type="radio" id="tarn2" name="tarn" value="t2">
+           <label for="html">เฮียธารสุดโหด</label><br>
+        <input type="radio" id="tarn3" name="tarn" value="t3">
+           <label for="html">พี่ธารสุดสวย</label><br>
+        <input type="radio" id="tarn4" name="tarn" value="t4">
+           <label for="html">เจ้าหญิงสายธาร</label><br>
+        <input type="radio" id="tarn5" name="tarn" value="t5">
+           <label for="html">คุณหญิงพรนัชชา</label><br>
+        <input type="radio" id="tarn6" name="tarn" value="t6">
+           <label for="html">รักในทุกเวอร์ชั่นของเธอ ❤️</label><br>
+
+        <br>
+
+        <button type="button" onclick="checkAnswer()">Submit</button>
+    </form>
+
+    <script>
+      // Enter your script here
+      function checkAnswer() {
+        const q1 = document.getElementById("age2").checked;
+        const q2 = document.getElementById("name2").checked;
+        const q3 = document.getElementById("dog1").checked;
+        const q4 = document.getElementById("tarn6").checked;
+        const radBox = document.querySelectorAll("input[type=radio]");
+
+        if (q1 && q2 && q3 && q4)
+            alert("น้องจิ๋วโคดโหด!!! รักเทอน้าาาางับ 😍");
+        else
+            alert("เทอนี่มันจิ๋วจิงๆ ไอ้ตัวจิ๋วเด็กซุกซน 🐥");
+
+        for(var i = 0; i < radBox.length; i++)
+            radBox[i].checked = false;
+      }
+
+
+
+
+    </script>
+</body>
+</html>
